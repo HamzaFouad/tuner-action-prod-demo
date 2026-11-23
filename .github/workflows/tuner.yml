@@ -19,7 +19,7 @@ jobs:
       - id: case
         run: grep -E '^[a-z_]+=' .github/case.env >> "$GITHUB_OUTPUT"
       - id: tuner
-        uses: usetuner/tuner-action@main
+        uses: usetuner/tuner-action@feat/comment-all-scenarios
         with:
           api-key: ${{ secrets.TUNER_API_KEY }}
           agent: ${{ steps.case.outputs.agent }}
